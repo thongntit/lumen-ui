@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
   pull_request:
 
 jobs:
@@ -18,8 +18,50 @@ jobs:
           node-version: 20
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build
+      - run: pnpm --filter @thongntit/lumen-ui build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lumen-ui-dist
+          path: packages/lumen-ui/dist
+          retention-days: 1
+          if-no-files-found: error
+
+  typecheck:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - uses: actions/download-artifact@v4
+        with:
+          name: lumen-ui-dist
+          path: packages/lumen-ui/dist
       - run: pnpm typecheck
-      - name: Verify pack contents
+
+  pack:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - uses: actions/download-artifact@v4
+        with:
+          name: lumen-ui-dist
+          path: packages/lumen-ui/dist
+      - name: npm pack --dry-run
         working-directory: packages/lumen-ui
         run: npm pack --dry-run
