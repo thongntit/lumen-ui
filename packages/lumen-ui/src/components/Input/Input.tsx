@@ -3,7 +3,7 @@ import {
   type InputHTMLAttributes,
   type ReactNode,
 } from "react";
-import { cx } from "../../lib/cx";
+import { cx } from "../../lib/cx.js";
 import "./Input.css";
 
 export type InputProps = InputHTMLAttributes<HTMLInputElement> & {

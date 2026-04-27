@@ -1,2 +1,2 @@
-export { CTA } from "./CTA";
-export type { CTAProps } from "./CTA";
+export { CTA } from "./CTA.js";
+export type { CTAProps } from "./CTA.js";

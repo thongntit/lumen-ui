@@ -1,2 +1,2 @@
-export { Pricing } from "./Pricing";
-export type { PricingProps, PricingTier } from "./Pricing";
+export { Pricing } from "./Pricing.js";
+export type { PricingProps, PricingTier } from "./Pricing.js";

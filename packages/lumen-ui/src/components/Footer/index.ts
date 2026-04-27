@@ -1,2 +1,2 @@
-export { Footer } from "./Footer";
-export type { FooterProps, FooterLink } from "./Footer";
+export { Footer } from "./Footer.js";
+export type { FooterProps, FooterLink } from "./Footer.js";

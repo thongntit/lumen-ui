@@ -1,5 +1,5 @@
 import type { HTMLAttributes, ReactNode } from "react";
-import { cx } from "../../lib/cx";
+import { cx } from "../../lib/cx.js";
 import "./Eyebrow.css";
 
 export type EyebrowProps = HTMLAttributes<HTMLSpanElement> & {
