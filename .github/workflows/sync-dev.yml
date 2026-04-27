@@ -1,0 +1,70 @@
+name: Sync main to dev
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Skip if dev branch does not exist
+        id: dev
+        run: |
+          if git fetch origin dev:refs/remotes/origin/dev 2>/dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::dev branch missing — skipping sync"
+          fi
+
+      - name: Skip if dev already contains main
+        id: diff
+        if: steps.dev.outputs.exists == 'true'
+        run: |
+          if git merge-base --is-ancestor origin/main origin/dev; then
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::main already merged into dev — nothing to sync"
+          else
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open or update sync PR
+        if: steps.dev.outputs.exists == 'true' && steps.diff.outputs.needed == 'true'
+        # If SYNC_TOKEN (PAT or GitHub App token with repo + workflow scope)
+        # is set, branch-protection CI will re-trigger on the auto-opened PR
+        # and auto-merge can actually fire. Without it we fall back to
+        # GITHUB_TOKEN, which opens the PR fine but does not re-trigger CI
+        # (GitHub security policy) — the PR will sit open until you push,
+        # close/reopen, or merge it manually.
+        env:
+          GH_TOKEN: ${{ secrets.SYNC_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          existing=$(gh pr list --base dev --head main --state open --json url --limit 1)
+          if [ "$existing" != "[]" ]; then
+            url=$(echo "$existing" | jq -r '.[0].url')
+            echo "::notice::Existing sync PR open: $url (head=main updates automatically as new commits land)"
+            exit 0
+          fi
+
+          pr_url=$(gh pr create \
+            --base dev \
+            --head main \
+            --title "chore: sync main into dev" \
+            --body "Automated sync after merge into main. Will auto-merge if branch checks pass; left open on conflict for manual resolution.")
+          echo "::notice::Created sync PR: $pr_url"
+
+          if gh pr merge "$pr_url" --auto --merge; then
+            echo "::notice::Auto-merge enabled"
+          else
+            echo "::notice::Auto-merge could not be enabled (likely a conflict, or auto-merge disabled at the repo level). PR left open."
+          fi
