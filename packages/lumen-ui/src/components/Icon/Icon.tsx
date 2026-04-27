@@ -1,5 +1,5 @@
 import type { ComponentType, SVGProps } from "react";
-import { cx } from "../../lib/cx";
+import { cx } from "../../lib/cx.js";
 import "./Icon.css";
 
 export type IconSize = 16 | 20 | 24 | 32;
