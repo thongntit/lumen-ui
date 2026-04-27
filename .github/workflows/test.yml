@@ -1,0 +1,30 @@
+name: Test
+
+on:
+  pull_request:
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @thongntit/lumen-ui typecheck
+
+  # Future quality jobs slot in here as their tooling is configured.
+  # Each becomes its own required status check on the protected branches.
+  #
+  # lint:
+  #   runs-on: ubuntu-latest
+  #   steps: ... pnpm lint
+  #
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps: ... pnpm test
