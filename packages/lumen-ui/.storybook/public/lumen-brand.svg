@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" width="220" height="56" fill="none">
+  <g transform="translate(4 4)" stroke="#F59410" stroke-width="1.8" stroke-linecap="round">
+    <circle cx="24" cy="24" r="10" fill="#FFD05A" stroke="none"/>
+    <circle cx="24" cy="24" r="10"/>
+    <line x1="24" y1="2" x2="24" y2="8"/>
+    <line x1="24" y1="40" x2="24" y2="46"/>
+    <line x1="2" y1="24" x2="8" y2="24"/>
+    <line x1="40" y1="24" x2="46" y2="24"/>
+    <line x1="8" y1="8" x2="12" y2="12"/>
+    <line x1="36" y1="36" x2="40" y2="40"/>
+    <line x1="40" y1="8" x2="36" y2="12"/>
+    <line x1="12" y1="36" x2="8" y2="40"/>
+  </g>
+  <text
+    x="64"
+    y="38"
+    font-family="Lora, 'Times New Roman', Georgia, serif"
+    font-size="32"
+    font-style="italic"
+    font-weight="500"
+    fill="#0A0F1A"
+  >Lumen UI</text>
+</svg>
