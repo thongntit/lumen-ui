@@ -1,0 +1,99 @@
+.lm-features {
+  max-width: var(--container-content);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.lm-features__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-10);
+  max-width: 60ch;
+}
+
+.lm-features__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.lm-features__heading {
+  font-family: var(--font-sans);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-snug);
+  line-height: var(--leading-snug);
+  color: var(--fg);
+  margin: 0;
+}
+
+.lm-features__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+
+.lm-features__grid--2 { grid-template-columns: 1fr; }
+.lm-features__grid--3 { grid-template-columns: 1fr; }
+
+@media (min-width: 768px) {
+  .lm-features__grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .lm-features__grid--3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+.lm-features__item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.lm-features__item--dark {
+  background: var(--ink-950);
+  color: var(--paper-100);
+  border-color: var(--ink-800);
+}
+.lm-features__item--dark .lm-features__title { color: var(--paper-100); }
+.lm-features__item--dark .lm-features__desc  { color: var(--ink-300); }
+.lm-features__item--dark .lm-features__icon  { background: var(--ink-800); color: var(--lumen-300); }
+
+.lm-features__item--pull {
+  background: var(--lumen-100);
+  border-color: var(--lumen-300);
+}
+
+.lm-features__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--lumen-100);
+  color: var(--lumen-700);
+  font-family: var(--font-mono);
+  font-weight: var(--weight-medium);
+  font-size: 15px;
+  margin-bottom: var(--space-4);
+}
+
+.lm-features__title {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  font-size: 18px;
+  margin: 0 0 var(--space-2);
+  letter-spacing: var(--tracking-snug);
+}
+
+.lm-features__desc {
+  font-size: 14px;
+  line-height: var(--leading-relaxed);
+  color: var(--fg-2);
+  margin: 0;
+}

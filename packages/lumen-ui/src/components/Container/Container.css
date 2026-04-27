@@ -1,0 +1,12 @@
+.lm-container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .lm-container { padding-inline: var(--space-8); }
+}
+
+.lm-container--content { max-width: var(--container-content); }
+.lm-container--bleed   { max-width: var(--container-bleed); }

@@ -1,0 +1,9 @@
+.lm-divider {
+  border: 0;
+  border-top: 1px solid var(--border);
+  width: 100%;
+}
+
+.lm-divider--tight   { margin: var(--space-3) 0; }
+.lm-divider--default { margin: var(--space-12) 0; }
+.lm-divider--loose   { margin: var(--space-16) 0; }

@@ -1,0 +1,119 @@
+/* ============================================================
+   LUMEN — Semantic type styles
+   Class-based so consumers opt in. Pairs with tokens.css.
+   ============================================================ */
+
+.lm-display, h1.lm-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(3rem, 7vw, var(--text-6xl));
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+  margin: 0;
+}
+
+.lm-h1 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  font-size: clamp(2.25rem, 5vw, var(--text-4xl));
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+  margin: 0;
+}
+
+.lm-h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-3xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--fg);
+  margin: 0;
+}
+
+.lm-h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--fg);
+  margin: 0;
+}
+
+.lm-h4 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--fg);
+  margin: 0;
+}
+
+.lm-eyebrow {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.lm-lede {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--leading-relaxed);
+  color: var(--fg-2);
+  font-weight: var(--weight-regular);
+  margin: 0;
+}
+
+.lm-small {
+  font-size: var(--text-sm);
+  color: var(--fg-3);
+  line-height: var(--leading-normal);
+}
+
+.lm-caption {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--fg-3);
+  letter-spacing: var(--tracking-wide);
+}
+
+.lm-display-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Light motif utilities */
+.lm-lumen-text {
+  background: var(--grad-sunrise);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.lm-lumen-glow { position: relative; }
+.lm-lumen-glow::before {
+  content: "";
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 80%;
+  background: var(--glow-lumen);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.lm-code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--surface-3);
+  padding: 0.12em 0.4em;
+  border-radius: var(--radius-xs);
+  color: var(--fg);
+}

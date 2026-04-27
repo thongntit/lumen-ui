@@ -1,0 +1,10 @@
+.lm-eyebrow-c {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.lm-eyebrow-c--accent { color: var(--lumen-600); }

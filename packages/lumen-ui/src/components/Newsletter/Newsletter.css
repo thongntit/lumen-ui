@@ -1,0 +1,92 @@
+.lm-newsletter {
+  display: flex;
+  align-items: stretch;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  transition: border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
+  max-width: 460px;
+  width: 100%;
+}
+
+.lm-newsletter:focus-within {
+  border-color: var(--ink-950);
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--lumen-500) 14%, transparent);
+}
+
+.lm-newsletter > input {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  outline: none;
+  padding: 8px 14px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--fg);
+  min-width: 0;
+}
+.lm-newsletter > input::placeholder { color: var(--ink-400); }
+
+.lm-newsletter__send {
+  background: var(--ink-950);
+  color: var(--paper-100);
+  border: 0;
+  border-radius: var(--radius-full);
+  padding: 0 18px;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  font-size: 13.5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  isolation: isolate;
+  transition: color var(--dur-2) var(--ease-out);
+  flex: none;
+}
+
+.lm-newsletter__send::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--grad-sunrise);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity var(--dur-3) var(--ease-out);
+}
+
+.lm-newsletter__send:hover { color: var(--ink-950); }
+.lm-newsletter__send:hover::before { opacity: 1; }
+
+.lm-newsletter__send:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lm-newsletter--done {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--sage-300);
+  background: var(--sage-100);
+  color: var(--sage-700);
+  border-radius: var(--radius-full);
+  padding: 10px 18px;
+  max-width: 460px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: var(--weight-medium);
+}
+
+.lm-newsletter__thanks {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.lm-newsletter__thanks::before {
+  content: "✓";
+  color: var(--sage-500);
+}

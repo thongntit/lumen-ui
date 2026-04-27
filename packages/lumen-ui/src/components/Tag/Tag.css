@@ -1,0 +1,12 @@
+.lm-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: var(--paper-200);
+  color: var(--fg-2);
+  border: 1px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}

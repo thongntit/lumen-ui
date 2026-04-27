@@ -1,0 +1,10 @@
+.lm-icon {
+  flex: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.lm-icon--default { color: var(--fg-2); }
+.lm-icon--accent  { color: var(--lumen-500); }
+.lm-icon--muted   { color: var(--fg-muted); }
+.lm-icon--inverse { color: var(--paper-100); }

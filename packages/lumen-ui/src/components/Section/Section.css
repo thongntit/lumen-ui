@@ -1,0 +1,12 @@
+.lm-section {
+  padding-block: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .lm-section { padding-block: var(--space-24); }
+}
+
+.lm-section--paper  { background: var(--paper-100); color: var(--fg); }
+.lm-section--white  { background: #FFFFFF; color: var(--fg); }
+.lm-section--subtle { background: var(--paper-200); color: var(--fg); }
+.lm-section--ink    { background: var(--ink-950); color: var(--fg-on-dark); }

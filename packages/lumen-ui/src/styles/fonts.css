@@ -1,0 +1,15 @@
+/* ============================================================
+   LUMEN — Fonts (opt-in)
+
+   This file is an OPT-IN convenience for quick prototyping.
+   It loads Inter / Lora / IBM Plex Mono from the Google Fonts CDN.
+
+   For production, prefer:
+     • Next.js   → next/font/google with adjustFontFallback: true
+     • Vite/etc. → @fontsource-variable packages, self-hosted
+
+   Both eliminate the render-blocking external request and
+   provide automatic fallback metrics (no CLS on font swap).
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap&subset=vietnamese');

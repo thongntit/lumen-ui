@@ -1,0 +1,40 @@
+.lm-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lm-field__label {
+  font-size: 13px;
+  font-weight: var(--weight-medium);
+  color: var(--fg);
+  letter-spacing: -0.005em;
+}
+
+.lm-field__req {
+  color: var(--lumen-600);
+  margin-left: 2px;
+}
+
+.lm-field__help {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-3);
+  letter-spacing: 0.02em;
+}
+
+.lm-field__error {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--coral-700);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.lm-field__error::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: var(--coral-500);
+}

@@ -1,0 +1,38 @@
+.lm-logocloud {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  padding-block: var(--space-12);
+}
+
+.lm-logocloud__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.lm-logocloud__row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  width: 100%;
+}
+
+.lm-logocloud__item {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--fg-3);
+  opacity: 0.8;
+  filter: grayscale(100%);
+  transition: opacity var(--dur-2) var(--ease-out), filter var(--dur-2) var(--ease-out);
+}
+.lm-logocloud__item:hover { opacity: 1; filter: grayscale(0); }
