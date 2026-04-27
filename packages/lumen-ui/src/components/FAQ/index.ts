@@ -1,2 +1,2 @@
-export { FAQ } from "./FAQ";
-export type { FAQProps, FAQItem } from "./FAQ";
+export { FAQ } from "./FAQ.js";
+export type { FAQProps, FAQItem } from "./FAQ.js";

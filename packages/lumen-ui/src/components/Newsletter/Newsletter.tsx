@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent, type ReactNode } from "react";
-import { cx } from "../../lib/cx";
+import { cx } from "../../lib/cx.js";
 import "./Newsletter.css";
 
 export type NewsletterProps = {

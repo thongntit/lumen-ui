@@ -1,2 +1,2 @@
-export { LogoCloud } from "./LogoCloud";
-export type { LogoCloudProps } from "./LogoCloud";
+export { LogoCloud } from "./LogoCloud.js";
+export type { LogoCloudProps } from "./LogoCloud.js";

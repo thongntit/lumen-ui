@@ -1,2 +1,2 @@
-export { Newsletter } from "./Newsletter";
-export type { NewsletterProps } from "./Newsletter";
+export { Newsletter } from "./Newsletter.js";
+export type { NewsletterProps } from "./Newsletter.js";
