@@ -2,9 +2,16 @@ import type { ReactNode } from "react";
 import { cx } from "../../lib/cx";
 import "./Footer.css";
 
+export type FooterLink = {
+  label: ReactNode;
+  href: string;
+  target?: string;
+  rel?: string;
+};
+
 export type FooterProps = {
   brand?: ReactNode;
-  links?: { label: ReactNode; href: string }[];
+  links?: FooterLink[];
   small?: ReactNode;
   className?: string;
 };
@@ -18,7 +25,9 @@ export function Footer({ brand, links = [], small, className }: FooterProps) {
           <ul className="lm-footer__links">
             {links.map((link, i) => (
               <li key={i}>
-                <a href={link.href}>{link.label}</a>
+                <a href={link.href} target={link.target} rel={link.rel}>
+                  {link.label}
+                </a>
               </li>
             ))}
           </ul>

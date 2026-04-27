@@ -68,10 +68,26 @@ export const Welcome: Story = {
       <Nav
         brand={<Brand />}
         links={[
-          { label: "Components", href: "?path=/story/components-button--variants" },
-          { label: "Patterns", href: "?path=/story/patterns-hero--default" },
-          { label: "Foundations", href: "?path=/story/foundations-colors--palette" },
-          { label: "Vietnamese", href: "?path=/story/foundations-vietnamese--glyphs" },
+          {
+            label: "Components",
+            href: "../?path=/story/components-button--variants",
+            target: "_top",
+          },
+          {
+            label: "Patterns",
+            href: "../?path=/story/patterns-hero--default",
+            target: "_top",
+          },
+          {
+            label: "Foundations",
+            href: "../?path=/story/foundations-colors--palette",
+            target: "_top",
+          },
+          {
+            label: "Vietnamese",
+            href: "../?path=/story/foundations-vietnamese--glyphs",
+            target: "_top",
+          },
         ]}
         sticky={false}
         actions={
@@ -100,14 +116,16 @@ export const Welcome: Story = {
               variant="accent"
               size="lg"
               trailingIcon={<ArrowRight />}
-              href="?path=/story/patterns-hero--default"
+              target="_top"
+              href="../?path=/story/patterns-hero--default"
             >
               Browse the components
             </Button>
             <Button
               variant="secondary"
               size="lg"
-              href="?path=/story/foundations-colors--palette"
+              target="_top"
+              href="../?path=/story/foundations-colors--palette"
             >
               See the tokens
             </Button>
@@ -325,14 +343,16 @@ export default function Page() {
             <>
               <Button
                 variant="secondary"
-                href="?path=/story/foundations-colors--palette"
+                target="_top"
+              href="../?path=/story/foundations-colors--palette"
               >
                 Foundations
               </Button>
               <Button
                 variant="accent"
                 trailingIcon={<ArrowRight />}
-                href="?path=/story/components-button--variants"
+                target="_top"
+              href="../?path=/story/components-button--variants"
               >
                 Components
               </Button>
@@ -344,9 +364,22 @@ export default function Page() {
       <Footer
         brand={<Brand />}
         links={[
-          { label: "GitHub", href: "https://github.com/thongntit/lumen-ui" },
-          { label: "Demo", href: "?path=/story/patterns-hero--default" },
-          { label: "Vietnamese", href: "?path=/story/foundations-vietnamese--glyphs" },
+          {
+            label: "GitHub",
+            href: "https://github.com/thongntit/lumen-ui",
+            target: "_blank",
+            rel: "noopener noreferrer",
+          },
+          {
+            label: "Demo",
+            href: "../?path=/story/patterns-hero--default",
+            target: "_top",
+          },
+          {
+            label: "Vietnamese",
+            href: "../?path=/story/foundations-vietnamese--glyphs",
+            target: "_top",
+          },
         ]}
         small="© 2026 LUMEN STUDIO · MIT"
       />

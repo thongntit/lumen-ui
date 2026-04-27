@@ -47,7 +47,7 @@ export { Nav } from "./components/Nav";
 export type { NavProps, NavLink } from "./components/Nav";
 
 export { Footer } from "./components/Footer";
-export type { FooterProps } from "./components/Footer";
+export type { FooterProps, FooterLink } from "./components/Footer";
 
 export { Hero } from "./components/Hero";
 export type { HeroProps } from "./components/Hero";

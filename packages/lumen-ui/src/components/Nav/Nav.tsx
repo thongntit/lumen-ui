@@ -7,6 +7,8 @@ import "./Nav.css";
 export type NavLink = {
   label: ReactNode;
   href: string;
+  target?: string;
+  rel?: string;
 };
 
 export type NavProps = {
@@ -39,7 +41,9 @@ export function Nav({
           <ul className="lm-nav__links" id="lm-nav-links">
             {links.map((link, i) => (
               <li key={i}>
-                <a href={link.href}>{link.label}</a>
+                <a href={link.href} target={link.target} rel={link.rel}>
+                  {link.label}
+                </a>
               </li>
             ))}
           </ul>
@@ -63,7 +67,12 @@ export function Nav({
           <ul>
             {links.map((link, i) => (
               <li key={i}>
-                <a href={link.href} onClick={() => setOpen(false)}>
+                <a
+                  href={link.href}
+                  target={link.target}
+                  rel={link.rel}
+                  onClick={() => setOpen(false)}
+                >
                   {link.label}
                 </a>
               </li>
