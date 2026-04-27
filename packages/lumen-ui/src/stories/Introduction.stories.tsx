@@ -213,12 +213,12 @@ export const Welcome: Story = {
           <h2 className="lm-h2" style={{ margin: 0 }}>
             Install once. Tree-shake by default.
           </h2>
-          <Code>{`pnpm add lumen-ui lucide-react`}</Code>
+          <Code>{`pnpm add @thongntit/lumen-ui lucide-react`}</Code>
           <Code>{`/* app/globals.css */
-@import "lumen-ui/styles/tokens.css";
-@import "lumen-ui/styles/reset.css";
-@import "lumen-ui/styles/typography.css";`}</Code>
-          <Code>{`import { Hero, Button } from "lumen-ui";
+@import "@thongntit/lumen-ui/styles/tokens.css";
+@import "@thongntit/lumen-ui/styles/reset.css";
+@import "@thongntit/lumen-ui/styles/typography.css";`}</Code>
+          <Code>{`import { Hero, Button } from "@thongntit/lumen-ui";
 
 export default function Page() {
   return (
@@ -381,7 +381,7 @@ export default function Page() {
             target: "_top",
           },
         ]}
-        small="© 2026 LUMEN STUDIO · MIT"
+        small="© 2026 LUMEN STUDIO"
       />
     </div>
   ),

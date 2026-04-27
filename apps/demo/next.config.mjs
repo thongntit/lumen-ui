@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["lumen-ui"],
+  transpilePackages: ["@thongntit/lumen-ui"],
   reactStrictMode: true,
   experimental: {
-    optimizePackageImports: ["lumen-ui", "lucide-react"],
+    optimizePackageImports: ["@thongntit/lumen-ui", "lucide-react"],
   },
 };
 

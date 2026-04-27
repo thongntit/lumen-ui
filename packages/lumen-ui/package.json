@@ -1,8 +1,28 @@
 {
-  "name": "lumen-ui",
-  "version": "0.1.0",
+  "name": "@thongntit/lumen-ui",
+  "version": "0.0.0",
   "description": "Lumen Design System — components for landing-page assembly. CWV-first.",
-  "license": "MIT",
+  "author": "Thong Nguyen",
+  "homepage": "https://github.com/thongntit/lumen-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thongntit/lumen-ui.git",
+    "directory": "packages/lumen-ui"
+  },
+  "bugs": {
+    "url": "https://github.com/thongntit/lumen-ui/issues"
+  },
+  "keywords": [
+    "react",
+    "design-system",
+    "ui",
+    "components",
+    "landing-page",
+    "rsc",
+    "ssr",
+    "css",
+    "lumen"
+  ],
   "type": "module",
   "sideEffects": [
     "**/*.css"
@@ -32,7 +52,8 @@
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
     "lucide-react": "^0.400.0",

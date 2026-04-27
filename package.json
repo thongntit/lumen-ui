@@ -8,9 +8,9 @@
   "scripts": {
     "build": "pnpm -r --filter \"./packages/**\" build",
     "build:demo": "pnpm --filter ./apps/demo build",
-    "dev": "pnpm --filter lumen-ui dev",
-    "storybook": "pnpm --filter lumen-ui storybook",
-    "build-storybook": "pnpm --filter lumen-ui build-storybook",
+    "dev": "pnpm --filter @thongntit/lumen-ui dev",
+    "storybook": "pnpm --filter @thongntit/lumen-ui storybook",
+    "build-storybook": "pnpm --filter @thongntit/lumen-ui build-storybook",
     "demo": "pnpm --filter ./apps/demo dev",
     "typecheck": "pnpm -r typecheck",
     "clean": "pnpm -r exec rm -rf dist .next storybook-static"
