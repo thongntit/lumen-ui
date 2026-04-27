@@ -17,6 +17,11 @@ const preview: Preview = {
         { name: "ink", value: "#0A0F1A" },
       ],
     },
+    options: {
+      storySort: {
+        order: ["Introduction", "Foundations", "Components", "Patterns"],
+      },
+    },
   },
 };
 
