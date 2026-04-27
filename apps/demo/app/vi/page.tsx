@@ -12,7 +12,7 @@ import {
   Pricing,
   Section,
   Testimonial,
-} from "lumen-ui";
+} from "@thongntit/lumen-ui";
 
 const Brand = () => (
   <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>

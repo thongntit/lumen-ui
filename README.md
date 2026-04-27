@@ -28,7 +28,7 @@ See [`packages/lumen-ui/README.md`](./packages/lumen-ui/README.md) for usage doc
 | `packages/lumen-ui/src/styles/` | Design tokens (`tokens.css`), reset, typography, fonts |
 | `packages/lumen-ui/src/components/` | One folder per component — `.tsx`, `.css`, `.stories.tsx` |
 | `packages/lumen-ui/.storybook/` | Storybook config (Vite framework) |
-| `apps/demo/` | Next.js 15 app importing `lumen-ui` (English + `/vi`) |
+| `apps/demo/` | Next.js 15 app importing `@thongntit/lumen-ui` (English + `/vi`) |
 
 ## CWV-first design
 
@@ -41,7 +41,3 @@ This library is consumed by landing pages where Core Web Vitals matter. Decision
 - Lucide as a peer dep, not bundled
 - Zero-JS FAQ accordion via native `<details>`
 - `prefers-reduced-motion` honored at the token level
-
-## License
-
-MIT.

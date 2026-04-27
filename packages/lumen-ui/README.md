@@ -13,7 +13,7 @@ This package is built **CWV-first**, since it's consumed by landing pages where 
 ## Install
 
 ```sh
-pnpm add lumen-ui lucide-react
+pnpm add @thongntit/lumen-ui lucide-react
 ```
 
 Peer deps: `react ^18 || ^19`, `react-dom`, `lucide-react`.
@@ -24,9 +24,9 @@ In your app root, import the tokens once:
 
 ```ts
 // app/globals.css (Next.js) or src/main.css (Vite)
-@import "lumen-ui/styles/tokens.css";
-@import "lumen-ui/styles/reset.css";
-@import "lumen-ui/styles/typography.css";
+@import "@thongntit/lumen-ui/styles/tokens.css";
+@import "@thongntit/lumen-ui/styles/reset.css";
+@import "@thongntit/lumen-ui/styles/typography.css";
 ```
 
 Each component imports its own CSS, so unused components contribute zero styles to your bundle.
@@ -91,7 +91,7 @@ Use `@fontsource/inter`, `@fontsource/lora`, `@fontsource/ibm-plex-mono` — all
 ### Quick start (not recommended for production)
 
 ```css
-@import "lumen-ui/styles/fonts.css";
+@import "@thongntit/lumen-ui/styles/fonts.css";
 ```
 
 This loads from the Google Fonts CDN. Fine for prototyping; switch to one of the above for production CWV.
@@ -100,7 +100,7 @@ This loads from the Google Fonts CDN. Fine for prototyping; switch to one of the
 
 ```tsx
 import { ArrowRight } from "lucide-react";
-import { Button, Hero, Nav } from "lumen-ui";
+import { Button, Hero, Nav } from "@thongntit/lumen-ui";
 
 export default function Page() {
   return (
@@ -151,13 +151,9 @@ All three font families ship full vi subsets. Wrap Vietnamese content in `lang="
 
 ```sh
 pnpm install
-pnpm --filter lumen-ui dev          # tsup watch
-pnpm --filter lumen-ui storybook    # storybook dev
+pnpm --filter @thongntit/lumen-ui dev          # tsup watch
+pnpm --filter @thongntit/lumen-ui storybook    # storybook dev
 pnpm --filter demo dev              # Next.js consumer demo
 ```
 
 Storybook covers all components and tokens. The `apps/demo` Next.js app validates SSR/RSC integration end-to-end.
-
-## License
-
-MIT.
