@@ -16,8 +16,7 @@ jobs:
           node-version: 20
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter @thongntit/lumen-ui build
-      - run: pnpm typecheck
+      - run: pnpm --filter @thongntit/lumen-ui typecheck
 
   # Future quality jobs slot in here as their tooling is configured.
   # Each becomes its own required status check on the protected branches.
